@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "PageEditor",
+    "version": "1.0",
+    "description": "Welcoming you to the cooperative university.",
+    "permissions": ["storage", "activeTab", "tabs"],
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_title": "Text Replacer"
+    },
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
